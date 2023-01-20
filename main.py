@@ -1,7 +1,7 @@
-from apachelogs import LogParser
 import sys
-from datetime import timedelta
 import csv
+from apachelogs import LogParser
+from datetime import timedelta
 
 filter0 = {
         "max_requests": 40,
@@ -85,7 +85,7 @@ with open(sys.argv[1]) as log_file:
                         row.request_time_fields['timestamp'])
 
 # sort and write to csv
-with open("output.csv", "a") as outputfile:
+with open(sys.argv[1].split(".")[0] + ".csv", "a") as outputfile:
     outputwriter = csv.writer(outputfile)
     output = sorted(output)
     for o in output:

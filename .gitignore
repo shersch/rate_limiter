@@ -1,3 +1,4 @@
 venv/
 ProdE-TestQ2.log
 __pycache__
+.DS_Store
